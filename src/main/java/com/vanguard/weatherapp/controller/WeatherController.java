@@ -28,7 +28,7 @@ public class WeatherController {
     @ResponseStatus(HttpStatus.OK)
     public WeatherDto getWeather(@RequestParam(name = "city") @NotBlank String city,
                                  @RequestParam(name = "country") @ValidCountry String country,
-                                 @RequestParam(name = "token") @NotBlank String token
+                                 @RequestParam(name = "token") String token
     ) {
         return weatherService.getWeather(city, country);
     }
