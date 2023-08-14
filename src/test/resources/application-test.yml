@@ -1,3 +1,7 @@
+spring:
+  flyway:
+    enabled: false
+
 open-weather-map:
   api:
     url: http://localhost:9999/
