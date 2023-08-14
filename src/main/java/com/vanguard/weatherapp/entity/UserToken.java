@@ -35,7 +35,8 @@ public class UserToken {
     private String token;
 
     @Column
-    private long rateLimit;
+    @Builder.Default
+    private int rateLimit = 5;
 
     @CreationTimestamp
     @Column(nullable = false, updatable = false)
