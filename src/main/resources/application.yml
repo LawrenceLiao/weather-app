@@ -21,6 +21,9 @@ spring:
     console:
       enabled: true
 
+weather:
+  expiry-mins: 60
+
 open-weather-map:
   api:
     url: http://api.openweathermap.org
