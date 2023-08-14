@@ -1,0 +1,4 @@
+open-weather-map:
+  api:
+    url: http://localhost:9999/
+    key: test-key
