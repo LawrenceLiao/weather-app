@@ -38,11 +38,17 @@ dependencies {
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'com.github.tomakehurst:wiremock-jre8-standalone:2.35.0'
-    testImplementation 'org.springframework.cloud:spring-cloud-contract-wiremock:4.0.0'
+    testImplementation 'org.springframework.cloud:spring-cloud-contract-wiremock:4.0.4'
     testImplementation "org.assertj:assertj-core"
 
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+test {
+    testLogging {
+        events "PASSED", "SKIPPED", "FAILED"
+    }
 }
