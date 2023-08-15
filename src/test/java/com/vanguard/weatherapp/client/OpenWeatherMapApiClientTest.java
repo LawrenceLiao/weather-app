@@ -35,7 +35,7 @@ public class OpenWeatherMapApiClientTest {
     private String apiKey;
 
     @Test
-    void shouldReturnJsonNodeTypeResponseWhenSuccessfullyGettingWeatherDataFromOpenWeatherSide() {
+    void shouldReturnJsonNodeTypeResponseWhenSuccessfullyGettingWeatherDataFromOpenWeatherMapSide() {
         String description = "Sunny";
         String response = StubsOpenWeatherMapResponse.stubSuccessResponse(description);
 
@@ -53,7 +53,7 @@ public class OpenWeatherMapApiClientTest {
     }
 
     @Test
-    void shouldThrowExceptionWhenCityIsNotFoundOnOpenWeatherEnd() {
+    void shouldThrowExceptionWhenCityIsNotFoundOnOpenWeatherMapEnd() {
         String response = StubsOpenWeatherMapResponse.stubNotFoundResponse();
 
         WireMock.stubFor(WireMock.get(WireMock.urlEqualTo(generateURI(CITY, COUNTRY)))

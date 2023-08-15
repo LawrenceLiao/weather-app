@@ -17,7 +17,6 @@ import org.springframework.web.client.HttpServerErrorException;
 public class OpenWeatherMapService {
 
     public final static String WEATHER_NODE_NAME = "weather";
-
     public final static String DESCRIPTION_NODE_NAME = "description";
 
     private final OpenWeatherMapApiClient openWeatherMapApiClient;

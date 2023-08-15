@@ -33,7 +33,7 @@
 
 ## Run all tests
 * Under the root directory of the project
-* Execute below command to build the artifact:
+* Execute below command to run all tests of this project:
   `./gradlew clean test`
 * No need to change any configuration or inject any arguments
 
@@ -43,9 +43,9 @@ Call the below endpoint via browser or tools like *Postman*
 `http://localhost:8080/api/v1/weather?city={city}&country={country}&token={token}`
 
 Request parameters:
-* `city` refers to the full city name(case ignored), e.g. **melbourne**
-* `country`refers to abbreviation for country name(case ignored), e.g. **au** for Australia
-* `token` refers to user's token for this application
+* `city` refers to the full city name(case-ignored), e.g. **melbourne**
+* `country`refers to abbreviation for country name(case-ignored), e.g. **au** for Australia
+* `token` refers to user's token for this application(case-sensitive)
 
 Example:
 `http://localhost:8080/api/v1/weather?city=melbourne&country=au&token=fake-user-token`
@@ -53,7 +53,7 @@ Example:
 ## Assumptions and Tradeoff
 * Assume user token is unique for each user and not updatable
 * Assume that request with invalid input(city, country) still counts for access
-* For simplicity, do not store info unused in this app about users in DB
+* For simplicity, do not store info unused in this app about users into DB
 * Assume default time zone for server is *UTC*
 * Assume we ignore rate limit on *OpenWeatherMap* side
 

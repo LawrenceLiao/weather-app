@@ -45,5 +45,4 @@ public class Weather {
     @UpdateTimestamp
     @Column(nullable = false)
     private OffsetDateTime updatedAt;
-
 }

@@ -18,7 +18,9 @@ import java.util.concurrent.atomic.AtomicReference;
 public class WeatherService {
 
     private final OpenWeatherMapService openWeatherMapService;
+
     private final WeatherRepository weatherRepository;
+
     private final WeatherMapper weatherMapper;
 
     @Value("${weather.expiry-mins}")

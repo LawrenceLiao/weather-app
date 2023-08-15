@@ -8,13 +8,11 @@ import java.util.Locale;
 import java.util.Set;
 
 public class CountryValidator implements ConstraintValidator<ValidCountry, String> {
+
     private final static Set<String> COUNTRY_CODES = Locale.getISOCountries(Locale.IsoCountryCode.PART1_ALPHA2);
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
-        if (Strings.isEmpty(value)) {
-            return false;
-        }
-        return COUNTRY_CODES.contains(value.toUpperCase());
+        return Strings.isNotEmpty(value) && COUNTRY_CODES.contains(value.toUpperCase());
     }
 }

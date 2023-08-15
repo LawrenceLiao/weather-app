@@ -21,8 +21,6 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Constraint(validatedBy = CountryValidator.class)
 public @interface ValidCountry {
     String message() default "Country should be in the list of ISO 3166";
-
     Class<?>[] groups() default { };
-
     Class<? extends Payload>[] payload() default { };
 }

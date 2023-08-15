@@ -34,7 +34,6 @@ public class OpenWeatherMapServiceTest {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
-
     @Test
     void shouldReturnWeatherDescriptionWhenSuccessfullyRetrievingWeather() throws Exception {
         String weatherDescription = "broken clouds";

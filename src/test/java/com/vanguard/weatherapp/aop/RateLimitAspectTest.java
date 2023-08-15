@@ -63,7 +63,7 @@ public class RateLimitAspectTest {
     }
 
     @Test
-    void shouldThrowExceedRateLimitExceptionAndInterceptTheInvocationOfTargetedMethodWhenRateLimitExceeds() throws Throwable {
+    void shouldThrowExceededRateLimitExceptionAndInterceptTheInvocationOfTargetedMethodWhenRateLimitExceeds() throws Throwable {
         UserToken userToken = StubsUserToken.stubUserToken(TOKEN);
 
         when(userTokenRepository.findByToken(TOKEN)).thenReturn(Optional.of(userToken));
@@ -89,6 +89,7 @@ public class RateLimitAspectTest {
     private String[] stubArgs(String token) {
         return new String[] {"melbourne", "au", token};
     }
+
     private CodeSignature stubSignature() {
         return new CodeSignature() {
             @Override

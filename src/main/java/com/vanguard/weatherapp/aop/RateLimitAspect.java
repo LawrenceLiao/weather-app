@@ -32,6 +32,7 @@ public class RateLimitAspect {
     private final static long RATE_LIMIT_WINDOW_HOUR = 1L;
 
     private final UserTokenRepository userTokenRepository;
+
     private final TokenHistoryRepository tokenHistoryRepository;
 
 
