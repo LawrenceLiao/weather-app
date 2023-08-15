@@ -35,7 +35,6 @@
 * Under the root directory of the project
 * Execute below command to run all tests of this project:
   `./gradlew clean test`
-* No need to change any configuration or inject any arguments
 
 ## Interact with provided APIs
 ### `GET /weather`
@@ -52,7 +51,7 @@ Example:
 
 ## Assumptions and Tradeoff
 * Assume user token is unique for each user and not updatable
-* Assume that request with invalid input(city, country) still counts for access
+* Assume that requests with invalid input(city, country) still count for access
 * For simplicity, do not store info unused in this app about users into DB
 * Assume default time zone for server is *UTC*
 * Assume we ignore rate limit on *OpenWeatherMap* side
@@ -62,11 +61,9 @@ Example:
 * Use Spring Data JPA as ORM framework to manage entities and repository layer
 * Introduce Flyway to do DB version control, including creating tables and inserting initial data
 * Make use of AOP based on **Proxy Pattern** and **Sliding Window Algorithm** to implement **RateLimiter** for specified endpoints
-* Dynamically inject significant fields to differ in different environments
 * Introduce `ControllerAdvice` to implement errors centralised handling
 * Use **OffsetDateTime** with **UTC** to avoid various time zones converting issues
 * Using Gradle as project management tool is easier for managing dependencies
 * Use Lombok generating getter, constructor etc. to make code neater
 * Use Mapstruct to simply objects mapping code
-* Use Mockito, MockMvc and WireMock for testing mock
-* Apply both unit tests and integration tests with high testing coverage for guaranteeing robustness of the application
+* Apply both unit tests and integration tests via Junit, Mockito, MockMvc and WireMock with high testing coverage for guaranteeing robustness of the application
