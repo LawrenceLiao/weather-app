@@ -43,8 +43,8 @@ Call the below endpoint via browser or tools like *Postman*
 `http://localhost:8080/api/v1/weather?city={city}&country={country}&token={token}`
 
 Request parameters:
-* `city` refers to the full city name, e.g. **melbourne**
-* `country`refers to abbreviation for country name, e.g. **au** for Australia
+* `city` refers to the full city name(case ignored), e.g. **melbourne**
+* `country`refers to abbreviation for country name(case ignored), e.g. **au** for Australia
 * `token` refers to user's token for this application
 
 Example:

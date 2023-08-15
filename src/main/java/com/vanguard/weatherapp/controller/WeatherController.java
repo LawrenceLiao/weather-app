@@ -30,6 +30,6 @@ public class WeatherController {
                                  @RequestParam(name = "country") @ValidCountry String country,
                                  @RequestParam(name = "token") String token
     ) {
-        return weatherService.getWeather(city, country);
+        return weatherService.getWeather(city.toLowerCase(), country.toLowerCase());
     }
 }
