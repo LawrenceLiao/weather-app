@@ -23,9 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class OpenWeatherMapApiClientTest {
 
     private final static String CITY = "melbourne";
-
     private final static String TARGET_FIELD = "description";
-
     private final static String COUNTRY = "au";
 
     @Autowired

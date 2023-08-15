@@ -23,7 +23,6 @@ import static org.mockito.Mockito.when;
 public class OpenWeatherMapServiceTest {
 
     private final static String CITY = "melbourne";
-
     private final static String COUNTRY = "au";
 
     @Mock

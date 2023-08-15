@@ -17,13 +17,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ActiveProfiles("test")
 public class TokenHistoryRepositoryTest {
 
+    private final static String TOKEN = "test-token";
+
     @Autowired
     private TokenHistoryRepository tokenHistoryRepository;
 
     @Autowired
     private UserTokenRepository userTokenRepository;
-    private final static String TOKEN = "test-token";
-
 
     @Test
     void shouldGetHowManyTimesTheTokenIsUsedByUserTokenIdFromDatabase() {

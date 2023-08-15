@@ -50,9 +50,9 @@ Example:
 `http://localhost:8080/api/v1/weather?city=melbourne&country=au&token=fake-user-token`
 
 ## Assumptions and Tradeoff
+* Assume weather data expires in 60 minutes
 * Assume user token is unique for each user and not updatable
 * Assume that requests with invalid input(city, country) still count for access
-* For simplicity, do not store info unused in this app about users into DB
 * Assume default time zone for server is *UTC*
 * Assume we ignore rate limit on *OpenWeatherMap* side
 

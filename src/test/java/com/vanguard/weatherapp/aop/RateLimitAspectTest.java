@@ -35,11 +35,11 @@ public class RateLimitAspectTest {
     @Mock
     private TokenHistoryRepository tokenHistoryRepository;
 
-    @InjectMocks
-    private RateLimitAspect rateLimitAspect;
-
     @Mock
     private ProceedingJoinPoint joinPoint;
+
+    @InjectMocks
+    private RateLimitAspect rateLimitAspect;
 
     private final static String TOKEN = "test-token";
 
